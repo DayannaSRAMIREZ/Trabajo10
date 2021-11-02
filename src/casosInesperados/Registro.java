@@ -25,10 +25,10 @@ public class Registro {
     public static Persona validarPersona(Persona persona) throws PersonaMenorException, PersonaYaExisteException {
 
         if (analizarDatos(persona)== MENOR_DE_EDAD) {
-            PersonaMenorException e = new PersonaMenorException("Persona menor de edad");
+            PersonaMenorException e = new PersonaMenorException();
             throw e;
         } else if (analizarDatos(persona) == CONTIENE_PERSONA) {
-            PersonaYaExisteException e = new PersonaYaExisteException("Persona ya existe en registro");
+            PersonaYaExisteException e = new PersonaYaExisteException();
             throw e;
         } else {
             return persona;
