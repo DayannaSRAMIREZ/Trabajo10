@@ -1,6 +1,8 @@
 package casosInesperados.exceptions.persona;
 
-public class DatosInvalidos extends IllegalArgumentException  {
+import casosInesperados.exceptions.registro.PersonaException;
+
+public class DatosInvalidos extends PersonaException {
     public DatosInvalidos(String message) {
         super(message);
     }
