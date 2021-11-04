@@ -1,4 +1,4 @@
-package Error;
+package error;
 /*
 Crear un programa que intente crear arrays cada vez más largos hasta tirar OutOfMemoryError.
  Cuando tire el error, atraparlo e imprimir el último tamaño exitoso.
