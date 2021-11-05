@@ -54,7 +54,7 @@ public class Test {
             e.printStackTrace();
         }
         try {
-            Persona persona4 = crearPersona("Patricio Juarez ", 36, 112);
+            Persona persona4 = crearPersona("Patricio Juarez ", 36, 0);
         } catch (NombreVacioException e) {
             e.printStackTrace();
         } catch (EdadMenorException e) {

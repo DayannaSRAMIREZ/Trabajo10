@@ -7,12 +7,12 @@ import casosInesperados.exceptions.persona.NombreVacioException;
 import static casosInesperados.Registro.agregarPersona;
 
 public class Persona {
-    String nombre;
-    int edad;
-    int dni;
-    final static int NOMBRE_VACIO = 1;
-    final static int EDAD_INVALIDA = 2;
-    final static int DNI_INVALIDO = 3;
+    protected String nombre;
+    protected int edad;
+    protected int dni;
+    protected final static int NOMBRE_VACIO = 1;
+    protected final static int EDAD_INVALIDA = 2;
+    protected final static int DNI_INVALIDO = 3;
 
 
     public Persona(String nombre, int edad, int dni) {

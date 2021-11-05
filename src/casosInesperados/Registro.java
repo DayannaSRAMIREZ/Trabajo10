@@ -8,8 +8,8 @@ import java.util.Map;
 
 public class Registro {
     public static Map<Integer, Persona> miRegistro = new HashMap<>();
-    final static int MENOR_DE_EDAD=1;
-    final static int CONTIENE_PERSONA=2;
+    protected final static int MENOR_DE_EDAD=1;
+    protected final static int CONTIENE_PERSONA=2;
 
     public static int analizarDatos(Persona persona) {
 
