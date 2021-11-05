@@ -29,74 +29,74 @@ public class Test {
         try {
             Persona persona1 = crearPersona("Maria Perez", 50, 27);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona2 = crearPersona("Pablo Rodrigez ", 10, 28);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona3 = crearPersona("Luciano Alvarez ", 20, 27);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona4 = crearPersona("Patricio Juarez ", 36, 0);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona5 = crearPersona("Roberto Garcia ", 18, 114);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona6 = crearPersona("Luca rossi ", 20, 66);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona7 = crearPersona("Lucrecia Diaz ", 32, 66);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         try {
             Persona persona8 = crearPersona("Lita Vallejos ", 40, 44);
         } catch (NombreVacioException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (EdadMenorException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (DniInvalidoException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
         Registro.imprimirRegistro();
