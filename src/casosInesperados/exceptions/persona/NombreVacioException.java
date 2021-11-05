@@ -1,7 +1,7 @@
 package casosInesperados.exceptions.persona;
 
-public class NombreVacio extends DatosInvalidos {
-    public NombreVacio() {
+public class NombreVacioException extends DatosInvalidosException {
+    public NombreVacioException() {
         super("El nombre se encuentra vacio");
     }
 }

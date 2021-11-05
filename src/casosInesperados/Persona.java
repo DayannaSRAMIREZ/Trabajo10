@@ -1,8 +1,8 @@
 package casosInesperados;
 
-import casosInesperados.exceptions.persona.DniInvalido;
-import casosInesperados.exceptions.persona.EdadMenor;
-import casosInesperados.exceptions.persona.NombreVacio;
+import casosInesperados.exceptions.persona.DniInvalidoException;
+import casosInesperados.exceptions.persona.EdadMenorException;
+import casosInesperados.exceptions.persona.NombreVacioException;
 
 import static casosInesperados.Registro.agregarPersona;
 
@@ -29,6 +29,22 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Persona{");
@@ -51,39 +67,31 @@ public class Persona {
         return 0;
     }
 
-    public static Persona validaPersona(String nombre, int edad, int dni) throws NombreVacio, DniInvalido, EdadMenor {
+    public static Persona validaPersona(String nombre, int edad, int dni) throws NombreVacioException, DniInvalidoException, EdadMenorException {
 
         if (validacionDeDatos(nombre, edad, dni) == 0) {
             Persona persona1 = new Persona(nombre, edad, dni);
             return persona1;
         } else if (validacionDeDatos(nombre, edad, dni) == NOMBRE_VACIO) {
-            NombreVacio e = new NombreVacio();
+            NombreVacioException e = new NombreVacioException();
             throw e;
         } else if (validacionDeDatos(nombre, edad, dni) == EDAD_INVALIDA) {
-            EdadMenor e = new EdadMenor();
+            EdadMenorException e = new EdadMenorException();
             throw e;
         } else if (validacionDeDatos(nombre, edad, dni) == DNI_INVALIDO) {
-            DniInvalido e = new DniInvalido();
+            DniInvalidoException e = new DniInvalidoException();
             throw e;
         }
         return null;
     }
+    /**/
 
-    public static Persona crearPersona(String nombre, int edad, int dni) {
+    public static Persona crearPersona(String nombre, int edad, int dni) throws NombreVacioException,
+            EdadMenorException, DniInvalidoException {
 
-        try {
-            Persona persona1 = validaPersona(nombre, edad, dni);
+        Persona persona1 = validaPersona(nombre, edad, dni);
+        agregarPersona(persona1);
+        return persona1;
 
-            agregarPersona(persona1);
-            return persona1;
-
-        } catch (DniInvalido e) {
-            System.out.println(e.getMessage());
-        } catch (EdadMenor e) {
-            System.out.println(e.getMessage());
-        } catch (NombreVacio e) {
-            System.out.println(e.getMessage());
-        }
-        return null;
     }
 }

@@ -1,8 +1,8 @@
 package casosInesperados.exceptions.persona;
 
-public class DniInvalido extends DatosInvalidos{
+public class DniInvalidoException extends DatosInvalidosException {
 
-        public DniInvalido() {
+        public DniInvalidoException() {
             super("Dni invalido");
         }
 }

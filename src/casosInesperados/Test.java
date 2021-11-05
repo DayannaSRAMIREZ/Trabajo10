@@ -1,5 +1,9 @@
 package casosInesperados;
 
+import casosInesperados.exceptions.persona.DniInvalidoException;
+import casosInesperados.exceptions.persona.EdadMenorException;
+import casosInesperados.exceptions.persona.NombreVacioException;
+
 import static casosInesperados.Persona.crearPersona;
 
 
@@ -21,14 +25,79 @@ Atrapar ambas por separado y mostrar un error correspondiente. En el caso de per
 */
 public class Test {
     public static void main(String[] args) {
-        Persona persona1 = crearPersona("Maria Perez", 50, 27);
-        Persona persona2 = crearPersona("Pablo Rodrigez ", 10, 28);
-        Persona persona3 = crearPersona("Luciano Alvarez ", 20, 27);
-        Persona persona4 = crearPersona("Patricio Juarez ", 36, 112);
-        Persona persona5 = crearPersona("Roberto Garcia ", 18, 114);
-        Persona persona6 = crearPersona("Luca rossi ", 20, 66);
-        Persona persona7 = crearPersona("Lucrecia Diaz ", 32, 66);
-        Persona persona8 = crearPersona("Lita Vallejos ", 40, 44);
+
+        try {
+            Persona persona1 = crearPersona("Maria Perez", 50, 27);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona2 = crearPersona("Pablo Rodrigez ", 10, 28);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona3 = crearPersona("Luciano Alvarez ", 20, 27);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona4 = crearPersona("Patricio Juarez ", 36, 112);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona5 = crearPersona("Roberto Garcia ", 18, 114);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona6 = crearPersona("Luca rossi ", 20, 66);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona7 = crearPersona("Lucrecia Diaz ", 32, 66);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
+        try {
+            Persona persona8 = crearPersona("Lita Vallejos ", 40, 44);
+        } catch (NombreVacioException e) {
+            e.printStackTrace();
+        } catch (EdadMenorException e) {
+            e.printStackTrace();
+        } catch (DniInvalidoException e) {
+            e.printStackTrace();
+        }
 
         Registro.imprimirRegistro();
 

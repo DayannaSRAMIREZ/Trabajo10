@@ -1,7 +1,7 @@
 package casosInesperados.exceptions.persona;
 
-public class EdadMenor extends DatosInvalidos{
-    public EdadMenor() {
+public class EdadMenorException extends DatosInvalidosException {
+    public EdadMenorException() {
         super("Edad erronea");
     }
 }
